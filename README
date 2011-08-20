@@ -1,0 +1,6 @@
+Apple stopped supporting a unique identifier for iOS. This source code solves the problem. It generates a unique identifier based on the mac address of the device in combination with the bundle identifier.
+
+What you need to do:
+- copy NSString+MD5Addition and UIDevice+IdentifierAddition to your project.
+- use [[UIDevice currentDevice] uniqueIdentifier] to retrieve the unique identifier.
+- have fun ;)
