@@ -4,3 +4,5 @@ What you need to do:
 - copy NSString+MD5Addition and UIDevice+IdentifierAddition to your project.
 - use [[UIDevice currentDevice] uniqueIdentifier] to retrieve the unique identifier.
 - have fun ;)
+
+//Thanks to Erica Sadun for her UIDevice+Hardware Addition (used for the mac address retrieval).
