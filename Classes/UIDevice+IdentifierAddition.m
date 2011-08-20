@@ -71,14 +71,13 @@
     return outstring;
 }
 
-- (NSString *) uniqueIdentifier{
+- (NSString *) uniqueDeviceIdentifier{
     NSString *macaddress = [[UIDevice currentDevice] macaddress];
     NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
     
     NSString *stringToHash = [NSString stringWithFormat:@"%@%@",macaddress,bundleIdentifier];
     NSString *uniqueIdentifier = [stringToHash stringFromMD5];
     
-    NSLog(@"\nmacaddress: %@ \nbundleidentifier: %@ \nuniqueidentifier: %@",macaddress,bundleIdentifier,uniqueIdentifier);
     return uniqueIdentifier;
 }
 

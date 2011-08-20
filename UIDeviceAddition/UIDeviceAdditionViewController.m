@@ -33,7 +33,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, 300, 100)];
     label.numberOfLines = 0;
-    label.text = [[UIDevice currentDevice] uniqueIdentifier];
+    label.text = [[UIDevice currentDevice] uniqueDeviceIdentifier];
     
     [self.view addSubview:label];
     [label release];

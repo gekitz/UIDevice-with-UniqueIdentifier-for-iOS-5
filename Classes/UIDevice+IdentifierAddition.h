@@ -11,6 +11,6 @@
 
 @interface UIDevice (IdentifierAddition)
 
-- (NSString *) uniqueIdentifier;
+- (NSString *) uniqueDeviceIdentifier;
 
 @end
