@@ -3,6 +3,6 @@ Apple stopped supporting a unique identifier for iOS. This source code solves th
 What you need to do:
 - copy NSString+MD5Addition and UIDevice+IdentifierAddition to your project.
 - use [[UIDevice currentDevice] uniqueDeviceIdentifier] to retrieve the unique identifier.
-- have fun ;)
+- have fun and follow twitter.com/gekitz ;)
 
 //Thanks to Erica Sadun for her UIDevice+Hardware Addition (used for the mac address retrieval).
