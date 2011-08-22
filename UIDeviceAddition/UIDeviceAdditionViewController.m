@@ -31,10 +31,21 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, 300, 100)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 100)];
     label.numberOfLines = 0;
-    label.text = [[UIDevice currentDevice] uniqueDeviceIdentifier];
+    label.textAlignment = UITextAlignmentCenter;
+    label.text = [NSString stringWithFormat:@"Unique Device Identifier:\n%@",
+                  [[UIDevice currentDevice] uniqueDeviceIdentifier]];
     
+    [self.view addSubview:label];
+    [label release];
+                  
+    label = [[UILabel alloc] initWithFrame:CGRectMake(10, 210, 300, 100)];
+    label.numberOfLines = 0;
+    label.textAlignment = UITextAlignmentCenter;
+    label.text = [NSString stringWithFormat:@"Unique GLOBAL Device Identifier:\n%@",
+                  [[UIDevice currentDevice] uniqueGlobalDeviceIdentifier]];
+                  
     [self.view addSubview:label];
     [label release];
 }

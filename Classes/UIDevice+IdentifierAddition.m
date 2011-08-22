@@ -22,6 +22,9 @@
 
 @implementation UIDevice (IdentifierAddition)
 
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Private Methods
 
 // Return the local MAC addy
 // Courtesy of FreeBSD hackers email list
@@ -71,12 +74,23 @@
     return outstring;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Public Methods
+
 - (NSString *) uniqueDeviceIdentifier{
     NSString *macaddress = [[UIDevice currentDevice] macaddress];
     NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
     
     NSString *stringToHash = [NSString stringWithFormat:@"%@%@",macaddress,bundleIdentifier];
     NSString *uniqueIdentifier = [stringToHash stringFromMD5];
+    
+    return uniqueIdentifier;
+}
+
+- (NSString *) uniqueGlobalDeviceIdentifier{
+    NSString *macaddress = [[UIDevice currentDevice] macaddress];
+    NSString *uniqueIdentifier = [macaddress stringFromMD5];
     
     return uniqueIdentifier;
 }
