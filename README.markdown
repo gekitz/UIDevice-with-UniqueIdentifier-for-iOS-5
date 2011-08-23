@@ -14,5 +14,5 @@ What you need to do:
 
 //Thanks to Erica Sadun for her UIDevice+Hardware Addition (used for the mac address retrieval).
 
-# Licence
-see licence file.
+# License
+see license file.
