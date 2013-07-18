@@ -1,3 +1,6 @@
+
+** NOTE: this is not going to work under iOS 7 **
+
 # Description
 
 Apple stopped supporting a unique identifier for iOS. This source code solves the problem. It generates a unique identifier based on the mac address of the device in combination with the bundle identifier.
